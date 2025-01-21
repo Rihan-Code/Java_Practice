@@ -1,1 +1,4 @@
 Hello! I am super excited to write into a file using FileWriter class which is used for file streaming.
+
+Appending text using BufferedWriter.
+BufferedWriter is efficient!
