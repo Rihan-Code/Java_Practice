@@ -1,0 +1,24 @@
+File input/output (File I/O) in Java allows programs to read data from or write data to files on the file system.
+Java provides robust APIs in `java.io` and `java.nio` packages for handling file operations.
+
+Key Components of File I/O in Java:
+1. Streams:
+    - Streams represent the flow of data between a source (input) and a destination (output)
+    - Streams are divided into two types:
+        - Input Streams: Used to read data
+        - Used to write data
+    - Streams can handle:
+        - Byte Streams: Process raw binary data (InputStream and OuputStream)
+        - Charater Streams: Handle text data (Reader and Writer)
+
+2. File Handling 
+    - Java provides classes like File, FileInputStream, FileOutputStream, BufferedReader, BufferedWriter, etc., to perform file operations
+
+3. Important Classes: 
+    - File: Represents a file or directory path
+    - FileInputStream and FileOutputStream: Handle byte strams for binary 
+    - BufferedReader and BufferedWriter: Efficiently handle character streams
+
+4. PrintWriter: Facilitates formatted output to files
+
+5. Scanner: Reads data from a file
