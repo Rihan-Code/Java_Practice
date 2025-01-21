@@ -1,0 +1,6 @@
+OOP is a programming paradigm that models real-world entities using objects.
+The 4 fundamental principles of OOP are:
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
