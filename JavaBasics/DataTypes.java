@@ -1,4 +1,4 @@
-class DataTypes {
+public class DataTypes {
     public static void main(String[] args) {
         //Java has 2 categories of data types:
         //1. Primitive
@@ -20,5 +20,7 @@ class DataTypes {
         System.out.println("Double: " + d);
         System.out.println("Char: " + c);
         System.out.println("Boolean: " + isTrue);
+
+
     }
 }
