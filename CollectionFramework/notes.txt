@@ -1,0 +1,15 @@
+*Collection Framework in Java*
+The Java Collection Framework (JCF) provides a standardized architecture to store, manipulate, and retrieve data efficiently.
+It includes interfaces, classes, and algorithms to handle collections of objects like lists, sets, queues, and maps.
+
+* Key Components *
+   Interfaces
+1. List: Ordered collection; allows duplicates
+        - Implementations: ArrayList, LinkedList, Vector
+2. Set: unordered collection; no duplicate elements
+        - Implementations: HashSet, LinkedHashSet, TreeSet
+3. Queue: Follows FIFO (First-In-First-Out)
+        - Implementations: PriorityQueue, LinkedList
+4. Map: Stores key-value pairs; keys must be unique
+        - Implementations: HashMap, LinkedHashMap, TreeMap, Hashtable
+        
