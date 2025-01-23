@@ -9,6 +9,7 @@ package OopPrinciples;
 //    i)   Single Inheritance
 //    ii)  Multilevel Inheritance
 //    iii) Hierarchical Inheritance
+// ***super*** keyword is used to call the constructor of the parent class in the child class using the paramaters that will help to identify which constructor has to be called, like super(arg1, arg2);
 
 // Parent Animal class
 class Animal {

@@ -4,3 +4,26 @@ The 4 fundamental principles of OOP are:
 2. Inheritance
 3. Polymorphism
 4. Abstraction
+
+***In run-time Polymorphism during Dynamic dispatch i.e. overriding of methods
+---What to access is determined by the reference (parent class) and which version of it is determined by the object
+-eg. Engine car = new Car();
+
+**Abstract Class
+* Abstract classes should not have body of the mehtods
+* Even a single method of a class is abstract than we must make the class abstract
+* The methods of the abstract class should be overrided by the child classes 
+* For abstract classes we can't make their objects and hence the constructors can't be implemented
+
+
+* Interfaces
+- All the methods are abstract
+- All the variables are static
+- Uses 'implements' keyword to inheritance
+- Multiple Interfaces can be used in a single class unlike classes
+- Two different class can use same Interface
+- Interface is more dynamic in sense that it provides more flexibility and power, like Multiple inheritance is not allowed but with interferance you can achieve a similar scenario
+- Avoid interfaces in Performace critical code 
+- Interfaces can even extends, interface to interface we can use 'extends' keyword
+- With JDK 8 we can even provide default implementation
+- Static methods in Interface should have the body
