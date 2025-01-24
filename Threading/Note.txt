@@ -15,3 +15,23 @@ Different methods used in Threads are:
 5. t1.setPriority(Thread.HIGH_PRIORITY)
 6. t1.interrupt(): is sused to interrupt the thread, if the thread is sleeping than it will throw the interruptedException
 7. Thread.yield(): is a hint to the schedular that the current thread is willing to yield its current use of a processor. The schedular is free to ignore the hint.
+
+* synchronized has following issues:
+1. No assurity of fairness
+2. Indefinitly blocking
+3. No interruptibility
+4. Not able to recognize Read/Write locking
+
+** Locks: It helps to keep the process synchronized, by locking the shared resources when a thread is using it
+  They are of 2 types:
+1. Intrinsic: These are built into every object in Java. You don't see them, but they're there. When you use a synchronized keyword, you're using these automatic Locks
+2. Explicit: These are more advanced locks we can control ourself using the Lock class from java.util.concurrent.locks. You explicitly say when to lock and unlock, giving you more control over how and when people can write in the notebook
+
+- Lock is Interface
+
+* ReentrantLock have following methods [private final Lock lock = new ReentrantLock();]:
+1. lock()
+2. unlock()
+3. trylock()
+4. lockInterruptibility()
+5. for maintaining the fairness, [private final Lock lock = new ReentrantLock(true);]
