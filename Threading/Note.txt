@@ -1,0 +1,17 @@
+There are two ways with which we can create threads:
+1. Extending Thread
+2. Implementing Runnable
+- Implementing Runnable is used when a class is already extending another class and we can only inherit one class in Java.
+
+- User Threads: These are the threads used by the use to perform the task. JVM waits for the User Threads to get finish
+- Daemon Threads: These are the threads that are run by the processes in the background. JVM do NOT wait for them. 
+Different methods used in Threads are: 
+1. t1.run(): to run a process on a separate thread
+2. t1.start(): to start the thread
+3. Thread.sleep(): to put the thread in the waiting state (TIMING_WAITING)
+4. t1.join(): the main thread waits for the 't1' thread to complete it's execution and than only it, the main thread, will start excuting further
+5. t1.setPriority(Thread.MIN_PRIORITY)
+5. t1.setPriority(Thread.NORM_PRIORITY)
+5. t1.setPriority(Thread.HIGH_PRIORITY)
+6. t1.interrupt(): is sused to interrupt the thread, if the thread is sleeping than it will throw the interruptedException
+7. Thread.yield(): is a hint to the schedular that the current thread is willing to yield its current use of a processor. The schedular is free to ignore the hint.
