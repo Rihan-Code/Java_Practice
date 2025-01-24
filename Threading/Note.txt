@@ -35,3 +35,51 @@ Different methods used in Threads are:
 3. trylock()
 4. lockInterruptibility()
 5. for maintaining the fairness, [private final Lock lock = new ReentrantLock(true);]
+
+* Deadlock
+  It is a situation in mulithreading where two or more threads are blocked forever, waiting for each other to release a resource. This typically occurs when two or more threads have circular dependencies on a set of locks.
+  Typically it occurs when four conditions are met:
+  1. Mutual Exclusion
+  2. Hold and wait
+  3. No Preemption: Resources cannot be forcibly taken from threads holding them
+  4. Circular wait: A set of threads is waiting for each other in a circular chain
+
+* Thread Communication
+  In a mulithreaded environment, threads often need to communicate and coordinate with each other to accomplish a task. 
+  Without a proper communication mechanisms, threads might end up in inefficient busy-waiting states, leading to wastage of CPU resources and potential deadlocks.
+  There are certaing methods used for comminications:
+  1. wait
+  2. notify
+  3. notifyAll
+
+* Thread Safety
+  It is the condition where the threads do not produce any random or inaccurate behaviour or deadlocks or race condition, then we can call it as thread safe
+
+** Functional Interface: Is an interface where there is only one abstract method (only one method having no body) also known as Single Abstract Method (SAM) 
+
+** Lambda Funciton: It is a anonymous function
+
+* Thread Pooling:
+  Collection of pre-initialised threads
+  Helpful for:
+  1. Resource Management
+  2. Response Time
+  3. Control OVer Thread Count
+
+
+** Executors Framework in Java
+    The Executors Framework was introduced in Java 5 as part of the java.util.concurrent package to simplify the development of concurrent applications by abstracting away many of the complexities involved in creating and managing threads
+    The problems solved by Exicutor framework:
+    1. Resource Management
+    2. Scalability
+    3. Thread Reuse
+    4. Error Handling
+** It has 3 core interfaces:
+  1. Executor 
+  2. ExecutorService
+  3. ScheduledExicutorService
+
+* Callable: it is used when we want to return something
+  - it has call() method
+* Runnable; it is used when we do not want to return anything
+  - it has run() method
