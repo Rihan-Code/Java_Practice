@@ -3,7 +3,7 @@ There are two ways with which we can create threads:
 2. Implementing Runnable
 - Implementing Runnable is used when a class is already extending another class and we can only inherit one class in Java.
 
-- User Threads: These are the threads used by the use to perform the task. JVM waits for the User Threads to get finish
+- User Threads: These are the threads used by the user to perform the task. JVM waits for the User Threads to get finish
 - Daemon Threads: These are the threads that are run by the processes in the background. JVM do NOT wait for them. 
 Different methods used in Threads are: 
 1. t1.run(): to run a process on a separate thread
@@ -78,8 +78,48 @@ Different methods used in Threads are:
   1. Executor 
   2. ExecutorService
   3. ScheduledExicutorService
+  
+** ExecutorService has following methods:
+  - submit(r) // runnable
+  - submit(c) // callable
+  - submit(r, result) // it takes 2 parameters first its submit the 'runnable' task and 2nd one is what you want as the 'result' on completion
+  - shutdown()
+  - shutdownnow()
+  - awaitTermination()
+  - isShutdown()
+  - isTerminated()
+  - invokeAll()  // executes the given tasks, returning as list of Futures holding their status and results when all complete. Future.isDone is true for each element of thre returned list, // this also blocks the main thread to wait for all the tasks to complete
+  - invokeAny() // executes the given tasks, returning the result of one that has completed successfully i.e. without thowing an exception, if any do. Upon normal or exception rturn, tasks that have not completed are cancelled
 
 * Callable: it is used when we want to return something
   - it has call() method
+  - do not rquire to throw exception
 * Runnable; it is used when we do not want to return anything
   - it has run() method
+  - require try-catch block for throwing exception
+
+* Future
+- f.get() // waits for the task to get complete
+- f.isDone() // return a boolean value indicating whether a task get completed/termininated or not
+- f.cancel(true) // to cancel the task
+- f.isCancelled()
+- f.get(time, TimeUnit.SECOND) // it wait for the mentioned time
+ 
+
+*** ScheduledExicutorService
+- If want any task to be performed after any delay and also for periodic task performance
+
+
+* CountDownLatch()
+        `ExecutorService executorService = Executors.newFixedThreadPool(numberOfServices);
+
+        // when we want more than 1 thread to get executed and the main thread to wait for them
+        // CountDownLatch is NOT Resuable
+        executorService.submit(new DependentService(latch));
+        executorService.submit(new DependentService(latch));
+        executorService.submit(new DependentService(latch));
+        executorService.submit(new DependentService(latch));
+        latch.await();
+
+        System.out.println("Main");
+        executorService.shutdown();`
