@@ -1,0 +1,15 @@
+1. var
+- var keyword allows you to declare local variables wihtout explicitly specifying their type.
+- the compiler infers the type based on the value assigned.
+- Key points:
+    - Local variable type inference: the type is inferred by the compiler
+    - var can only be used for:
+        - Local variables (inside methods or code blocks)
+        - indexes in loops
+        - variables in lambda expressions
+    - cannot be used 
+        - For instance or static variables
+        - Without initialization (var x; is invalid)
+- Advantages:
+    - Reduces boilerplate code
+    - improves readability
