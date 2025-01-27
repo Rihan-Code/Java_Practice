@@ -1,0 +1,39 @@
+1. Lambdas 
+- A lambda expression is an anonymous function (a function without a name). Introduced in Java8 to enable functional programming.
+- Key points:
+    - Simplifies coding by removing boilerplate code for anonymous classes
+    - Works well with Funcional Interfaces
+
+
+2. Functional Interfaces
+- An interface with a single abstract method (SAM)
+- Examples: Runnable, Callable, Comparator, Consumer, etc.
+- New annotation: @FunctionalInterface to enforce this rule
+- Key points:
+    - Can be implemented using Lambda expression
+    - Improves code readability and conciseness
+- Built in Funcitonal Interfaces
+    - Java8 introduces `java.util.function` package, which contains many pre-defined fucnitonal Interfaces
+    Interface            Method                      Use-case
+    Predicate<T>      boolean test (T t)      Used for conitional checks
+    Function<T, R>    R apply(T t)            Converts a value of type T to R
+    Consumer<T>       void accept(T t)        Performs an action on T`
+    Supplier<T>        T get()                  Supplies a value of type T (used for lazy evaluation)
+- Predicate: validating user input in forms
+- Function: Converting user data from one format to another (e.g. String to Integer)
+- Consumer: Logging events or printing values to a console
+- Supplier: Providing fallback/default values in case of missing data
+
+3. Stream API
+- To process collections of data in a fucntional style
+- Allows you to perform operations like filter, map, reduce, collect, and more
+- Key Concepts:
+    - Intermediate operations: Transform streams (e.g. filter, map)
+    - Terminal operations: produce a result or side effect (e.g. forEach, collect)
+
+
+4. Date-Time API
+- Replaces the oudated `java.util.Date` and `java.util.Calender`
+- New package: `java.time`
+- Designed to handle time zones, formatting, and parsing more efficiently
+    
