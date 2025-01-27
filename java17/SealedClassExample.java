@@ -1,4 +1,4 @@
-package java17;
+package Java17;
 
 sealed class Shape permits Circle, Rectangle, Square {
 

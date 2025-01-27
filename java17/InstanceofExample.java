@@ -1,4 +1,4 @@
-package java17;
+package Java17;
 
 public class InstanceofExample {
     public static void main(String[] args) {
