@@ -1,0 +1,26 @@
+1. Sealed Classes
+- Sealed classes restrict which other `classes` or `interfaces` can extend or implement them
+- they provide better control for class heirarchy
+- Key Points
+    - Pupose: to define a controlled inheritacne heirarchy
+    - A sealed class specifies its permitted subclasses explicitly using the permits keyword
+    - Permitted subclasses must be:
+        - final
+        - sealed 
+        - non-sealed
+    - sealed classes help improve: 
+        - code safety: by limiting subclasses
+        - readability: developers can understand all possible types
+
+2. Enhanced Switch
+- Supports expression, blocks, and patterns
+- Supports 'null' case handling
+- Enables better type-checking and reduces boilerplate
+
+
+3. Enhanced Instanceof
+- Eliminate the need for explicit casting after instanceof checks
+- Automatically casts the object tot the target ype if the instancof condition is true
+- Key Points:
+    - Combines type-checking and casting in one step
+    - Improves readability and reduces boilerplate code
